@@ -1,5 +1,6 @@
-# Yuaylong.github.io<br>
-> My profilepages:<br>
-use for -learning
-        -searching
-        -build on some project
+# Yuaylong.github.io
+> My profilepages:
+- use for 
+  - learning
+  - searching
+  - build on some project
