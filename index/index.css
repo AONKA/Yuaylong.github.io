@@ -323,7 +323,11 @@ table, th, td {
         border: 1px solid #FFFFFF;
         border-collapse: collapse;
         }
-@font-face {
-          font-family: 'Designil Thai Font';
-          unicode-range: U+0E00–U+0E7F;
+@import 'https://fonts.googleapis.com/css?family=Kanit|Prompt';
+body{
+    font-family: 'Kanit', sans-serif;
+    }
+
+h1,h2,h3{
+            font-family: 'Prompt', sans-serif;
         }
