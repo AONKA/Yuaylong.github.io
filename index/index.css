@@ -305,3 +305,10 @@ button:focus {
 50% {background-position: 100% 50%}
 100% {background-position: 0% 50%}
 }
+code.border {
+        border-radius: 5px;
+        border: solid #848484;
+        width: 100%;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
