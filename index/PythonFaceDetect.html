@@ -93,9 +93,10 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2.imshow('img', img)<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k = cv2.waitKey(30) & 0xff<br>
             &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># หยุดเมื่อคีย์บอร์ดถูกกด</code><br>
-            &nbsp;&nbsp;&nbsp;if k==27:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
-            cap.release()<br>
+            &nbsp;&nbsp;&nbsp;break&nbsp;&nbsp;&nbsp;if k==27:<br>
+            &nbsp;&nbsp;&nbsp;break&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+            video_capture.release()<br>
+            cv2.destroyAllWindows()<br>
         </code>
     </div>
     <br>
