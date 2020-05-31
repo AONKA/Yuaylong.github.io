@@ -9,4 +9,4 @@
 
 > [My GitHub Pages](https://github.com/Yuaylong).
 
-> [My website](Yuaylong.github.io).
+> [My website](Yuaylong.github.io/index/index.html).
