@@ -88,14 +88,14 @@
             &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># เปลี่ยนรูปเป็นgrayscale</code><br>
             &nbsp;&nbsp;&nbsp;faces = face_cascade.detectMultiScale(gray, 1.1, 4)<br>
             &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># จับใบหน้า</code><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (x, y, w, h) in faces:
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2.imshow('img', img)
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k = cv2.waitKey(30) & 0xff
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (x, y, w, h) in faces:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2.imshow('img', img)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k = cv2.waitKey(30) & 0xff<br>
             &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># หยุดเมื่อคีย์บอร์ดถูกกด</code><br>
             &nbsp;&nbsp;&nbsp;if k==27:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break
-            cap.release()
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+            cap.release()<br>
         </code>
     </div>
     <br>
