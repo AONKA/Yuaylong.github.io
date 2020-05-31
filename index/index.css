@@ -307,19 +307,19 @@ button:focus {
 }
 code.border {
         border-radius: 5px;
-        border: solid white;
+        border: solid #FFFFFF;
         width: 100%;
         padding: 5px;
         background-color: black;
         }
 .bord {
         border-radius: 5px;
-        border: solid white;
+        border: solid #FFFFFF;
         width: 100%;
         padding: 5px;
         background-color: black;
         }
 table, th, td {
-        border: 1px solid white;
+        border: 1px solid #FFFFFF;
         border-collapse: collapse;
         }
