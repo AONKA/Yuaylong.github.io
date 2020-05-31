@@ -323,3 +323,7 @@ table, th, td {
         border: 1px solid #FFFFFF;
         border-collapse: collapse;
         }
+@font-face {
+          font-family: 'Designil Thai Font';
+          unicode-range: U+0E00–U+0E7F;
+        }
