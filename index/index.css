@@ -307,14 +307,14 @@ button:focus {
 }
 code.border {
         border-radius: 5px;
-        border: solid #ff7675;
+        border: solid white;
         width: 100%;
         padding: 5px;
         background-color: black;
         }
 .bord {
         border-radius: 5px;
-        border: solid #ff7675;
+        border: solid white;
         width: 100%;
         padding: 5px;
         background-color: black;
