@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FaceDetect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+    <div id="title">algorimeow</div><br>
+    <div id="links">
+        <a href="./index.html" style="margin:0px 60px;">home</a>
+    </div>
+    </div>
+
+    <center>
+    <div id="middle">
+        <div id="tagline" class="animated zoomIn" style="animation-delay:1.8s;">
+            if you're reading this, that mean's you can read<br>
+        </div>
+    </div>
+    </center>
+
+    <div id="portfolio">
+      <div class="container w-50">
+        <strong><h3>Python FaceDetection</h3></strong>
+        <hr>
+        <p>&nbsp&nbsp&nbspFace Detection คืออะไร คำตอบง่ายๆคือการตรวจจับใบหน้าเมี๊ยว<br>
+        แล้วทำอะไรได้บ้าง ก็สามารถเอาไปทำเครื่องตรวจจับอารมณ์ ระบบจดจำใบหน้า(Face Recognition) ได้นั่นเอง</p>
+        <h2>มาเริ่มกันเลย!</h2>
+        <p>ก่อนอื่นไปที่ cmd แล้วพิมพ์ <code>pip install opencv</code><br>
+            แล้วโหลดไฟล์<a href="https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml">haarcascade_frontalface_alt2.xml</a><br>
+        พอติดตั้งเสร็จแล้วให้ไปที่pythonแล้วพิมพ์โค้ดตามเลย
+        <strong><h3>สำหรับรูป</h3></strong>
+        <hr>
+        <div class="bord">
+        <code>
+            import cv2 <br>&nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue">#import opencv</code><br>
+            face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') <br>&nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># โหลด cascade (ไฟล์ตรวจจับใบหน้า)</code><br>
+            img = cv2.imread('ไฟล์รูป.นามสกุลไฟล์') <br>&nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue">#อ่านรูป</code><br>
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) <br>&nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue">#เปลี่ยนรูปเป็นสีเท่า(ง่ายต่อการคำนวน)</code><br>
+            faces = face_cascade.detectMultiScale(gray, 1.1, 4) <br>&nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue">#ตรวจจับหน้า</code><br>
+            for (x, y, w, h) in faces: <br>&nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue">#เพิ่มกรอปสี่เหลี่ยมบริเวณที่เจอหน้า</code><br>
+            &nbsp;&nbsp;&nbsp;cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)<br>
+            cv2.imshow('img', img) <br>&nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue">#โชว์รูป</code><br>
+            cv2.waitKey()<br>
+
+        </code>
+
+    </div>
+        <br>
+        <br>
+        <strong><h3>สำหรับวิดีโอ</h3></strong>
+        <hr>
+    <div class="bord">
+    <code>
+            import cv2<br>&nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue">#import opencv</code><br>
+            face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')<br>
+            &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># โหลด cascade (ไฟล์ตรวจจับใบหน้า)</code><br>
+            cap = cv2.VideoCapture(0)<br>
+            &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># เลือกกล้องบางเครื่องอาจเป็น 1</code><br>
+            # cap = cv2.VideoCapture('filename.mp4')<br>
+            &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># สามารถนำเข้าเป็นvideoได้</code><br>
+
+            while True:<br>
+                _, img = cap.read()<br>
+                &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># อ่านรูปทีละเฟรม</code><br>
+                gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
+                &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># เปลี่ยนรูปเป็นgrayscale</code><br>
+                faces = face_cascade.detectMultiScale(gray, 1.1, 4)<br>
+                &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># จับใบหน้า</code><br>
+                for (x, y, w, h) in faces:
+                    cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
+                cv2.imshow('img', img)
+                k = cv2.waitKey(30) & 0xff
+                &nbsp;&nbsp;&nbsp;<code style="color:cornflowerblue"># หยุดเมื่อคีย์บอร์ดถูกกด</code><br>
+                if k==27:
+                    break
+            cap.release()
+        </code>
+    </div>
+    <br>
+        <p>หวังว่าบทความนี้จะช่วยสำหรับคนที่ศึกษาได้นะ</p>
+    </div>
+    </div>
+    <div id="footer">
+        made on earth by a human <br><br> <a href="https://imfunniee.github.io">imfunniee</a>
+    </div>
+<script src="index.js" type="text/javascript"></script>
+</body>
+</html>
