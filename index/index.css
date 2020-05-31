@@ -1,14 +1,11 @@
 body,html {
     padding:0px;
     margin:0px;
-    font-family: 'Comfortaa', cursive ;
+    font-family: 'Bai Jamjuree', sans-serif;
     font-weight:bold;
     color:#fff;
     background:rgb(0, 0, 0);
     scroll-behavior: smooth;
-}
-body {
-    font-family: 'Prompt',db_helvethaica_x45_li;
 }
 #loading {
     width: 100vw;
