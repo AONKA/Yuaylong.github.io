@@ -312,3 +312,10 @@ code.border {
         padding: 5px;
         background-color: #f0f0f0;
     }
+.bord {
+        border-radius: 5px;
+        border: solid #f0f0f0;
+        width: 100%;
+        padding: 5px;
+        background-color: #f6f6f6;
+            }
