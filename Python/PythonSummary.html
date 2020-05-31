@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PythonPage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <style media="screen">
+    code.border {
+        border-radius: 5px;
+        border: solid #848484;
+        width: 100%;
+        padding: 5px;
+        background-color: #f0f0f0;
+    }
+    </style>
+</head>
+<body>
+  <div class="container w-50">
+<h1>สรุปพื้นฐานคร่าวๆ Python</h1>
+  <hr>
+    <p>&nbsp&nbsp&nbspบทความนี้เป็นการสรุปเนื้อหาเบื่องต้นของPythonพื่อให้ผู้ที่สนใจได้ศึกษาและพิจารณากันนะครับ</p>
+    <h2>ทำไมต้องPython?</h2>
+    <hr>
+    <p>&nbsp&nbsp&nbspสำหรับผู้ที่เริ่มต้นอาจสงสัยกันจึงได้สรุปข้อดีของPythonดังนี้ครับ</p>
+    <ul>
+        <li>มีโครงสร้างที่ง่าย เหมาะสำหรับผู้เริ่มต้น</li>
+        <li>ไม่จำเป็นต้องกำหนดชนิดข้อมูลล่วงหน้า</li>
+        <li>เขียนครั้งเดียวรันได้ทั้งWindows, Linux, macOS</li>
+        <li>มีLibraryรองรับมาก</li>
+        <li>สามารถเขียนอุปกรณ์IOTได้เช่นMicroPython</li>
+    </ul>
+    <br>
+    <br>
+
+
+    <h2>คำสั่ง <code>print()</code></h2>
+     <hr>
+    <p>&nbsp&nbsp&nbspมาเริ่มกันที่คำสั่งพื้นฐานของPythonกัน ซึ่งคำสั่ง<code>print()</code>ไว้สำหรับการแสดงผลลัพธ์ออกทางหน้าจอ มีsyntaxดังนี้</p>
+    <p><code class="border">print(var)</code>&nbspกำหนดให้<code>var</code>คือตัวแปร</p>
+
+    <h3><strong>สำหรับตัวอักษร/ประโยค (String/Character)</strong></h3>
+    <p>Example</p>
+    <p><code>print("") หรือ print('')</code>สำหรับตัวอักษร/ประโยคจะอยู่ภายใต้single quote(' ')หรือ double quote(" ")ก็ได้</p>
+    <code class="border">print("A") print("Hello") print('This is String') print('1')</code>
+    <hr>
+    <h3><strong>สำหรับตัวเลข (Number)</strong></h3>
+    <p><code>print()</code>ข้อมูลตัวเลขจะอยู่ภายใต้()โดยไม่จำเป็นต้องใส่""/''หากมีการใส่แสดงว่าข้อมูลนั้นเป็นString</p>
+    <p>Example</p>
+    <code class="border">print(1234) print(1+1)<br></code>
+    <br><code class="border" style="color:cornflowerblue" >output:1234 output: 2</code><br><br>
+    <p>โปรแกรมPythonจะมีการคำนวนอัตโนมัติหากพบเครื่องหมายทางคณิตศาสตร์</p>
+    <br>
+    <br>
+
+    <h2>คำสั่ง <code>input()</code></h2>
+    <hr>
+    <p>จากที่เราได้พูดถึงการแสดงผลออกทางจอภาพจากคำสั่ง<code>print()</code>ไปแล้ว ตอนนี้ขอพูดถึงการรับข้อมูจากแป้นพิมพ์ มีsyntaxดังนี้</p>
+    <code class="border">ตัวแปรที่รับค่า = input("ประโยคที่ต้องการถาม")</code>
+    <br>
+    <br>
+    <p>Example1</p>
+    <code class="border">A = input("How old are you?")</code>
+    <br>
+    <br>
+    <p>จากตัวอย่างแรกคือให้ตัวแปร A รับค่าจากแป้นพิมพ์โดยมีประโยคแสดงออกมาคือHow old are you?ซึ่ง <code>input()</code> จะเก็บค่าเป็น"String"เสมอหากไม่ได้กำหนดค่า</p>
+    <p>Example2</p>
+    <code class="border">B = input("กรุณาป้อนชื่อ")</code>
+    <br>
+    <br>
+    <code class="border" style="color:cornflowerblue">output: กรุณาป้อนชื่อ</code>
+    <br>
+    <br>
+    <code class="border" style="color:cornflowerblue">output: Python</code>
+    <br>
+    <br>
+    <code class="border" style="color:cornflowerblue">output: print(A)</code>
+    <br>
+    <br>
+    <code class="border" style="color:cornflowerblue">output: Python</code>
+    <br>
+    <br>
+    <p>จากตัวอย่างเมื่อขึ้น <code>"กรุณาป้อนชื่อ"</code> หากเราใส่ค่าเข้าไป ค่านั้นจะถูกเก็บอยู่ในตัวแปรAเมื่อเรา<code>print(A)</code> จะได้ผลลัพธ์คือค่าที่เราป้อนเข้าไป</p>
+    <br>
+    <br>
+
+    <h2>ตัวแปร (Variable)</h2>
+    <hr>
+    <p>&nbsp&nbsp&nbspสำหรับการเขียนโปรแกรมสิ่งที่ขาดไม่ได้คือตัวแปร ตัวแปรคือการจองทรัพยากรณ์ในคอมพิวเตอร์ เช่น ตัวแปรAคือการจองทรัพยากรชื่อAนั่นเอง</p>
+    <p>การตั้งชื่อตัวแปรของPythonมีดังนี้</p>
+    <ul>
+        <li>ตัวพิมพ์เล็ก/ใหญ่ ถือเป็นคนละตัวกัน</li>
+        <li>ตัวแปรต้องขึ้นต้นต้วยภาษาอังกฤษเท่านั้น</li>
+        <li>ตัวแปรต้องไม่มี จุด,ช่องว่าง,สัญลักษณ์พิเศษ ยกเว้น underscore(_)สามารถใช้ได้</li>
+    </ul>
+    <h3><strong>การประกาศตัวแปร</strong></h3>
+    <p>การประกาศตัวแปร คือ การที่เราสร้างตัวแปรเพื่อมาเก็บข้อมูลนั่นเอง</p>
+    <p>Example</p>
+    <p><code class="border">A = 2020</code> ให้ตัวแปรA เป็นชนิดข้อมูลจำนวนเต็ม(Integer)</p>
+    <p><code class="border">First_Name = "Python"</code> ให้ตัวแปรFirst_Name เป็นชนิดข้อมูลString</p>
+    <p><code class="border">StudentGrade = 3.5</code>ให้ตัวแปรStudentGrade เป็นชนิดข้อมูลทศนิยม(Float)</p>
+    <p><code class="border">Empty = " "</code>ให้ตัวแปรEmpty เป็นสตริงที่ค่าว่าง</p>
+    <p><code class="border">Var = None</code>ให้ตัวแปรVar เป็นค่าว่างแบบไม่กำหนดชนิดข้อมูล</p>
+    <hr>
+    <h3><strong>ข้อมูลจำนวนเชิงซ้อน (Complex)</strong></h3>
+    <p>Example</p>
+    <code class="border">A = 50 + 20j</code>
+    <br>
+    <br>
+    <code class="border">B = 9j + 2</code>
+    <br>
+    <br>
+    <hr>
+    <h3><strong>ข้อมูลตรรกกะ (Boolean)</strong></h3>
+    <p>เป็นการกำหนดค่าโดยที่มีค่าเพียง จริงTrue หรือ เท็จFalse<p>
+    <code class="border">X = True</code>
+    <br>
+    <br>
+    <code class="border">Y = False</code>
+    <br>
+    <br>
+    <code class="border">False==True</code>
+    <br>
+    <br>
+    <code class="border" style="color:cornflowerblue">output: False</code>
+    <br>
+    <br>
+    <h3>การแปลงชนิดข้อมูล</h3>
+    <p>มีบางครั้งที่เราต้องการใช้ข้อมูลที่อยู่ต่างชนิดสามารถกำหนดได้ดังนี้</p>
+  <div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>รูปแบบ</th>
+        <th>ความหมาย</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>int(ตัวแปร)</td>
+        <td>เป็นการแปลงจากข้อมูลชนิดอื่นเป็นInteger <br>เช่น int(False)มีค่าเป็น0 int(A)มีค่าเป็น65</td>
+      </tr>
+      <tr>
+        <td>str(ตัวแปร)</td>
+        <td>เป็นการแปลงจากข้อมูลชนิดอื่นเป็นString <br>เช่นstr(1234)มีค่าเป็น '1234'</td>
+      </tr>
+      <tr>
+        <td>char(ตัวแปร)</td>
+        <td>เป็นการแปลงจากข้อมูลชนิดอื่นเป็นCharacter<br>เช่นchar(65)มีค่าเป็นA </td>
+      </tr>
+      <tr>
+        <td>bool(ตัวแปร)</td>
+        <td>เป็นการแปลงจากข้อมูลชนิดอื่นเป็นBoolean<br>เช่นbool(1)มีค่าเป็นTrue </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <br>
+    <br>
+
+    <h2>การดำเนินการทางคณิตศาสตร์ (Arithmetic Operator)</h2>
+
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>สัญลักษณ์</th>
+        <th>ความหมาย</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>+</td>
+        <td>บวก (Addition)</td>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>ลบ (Subtraction)</td>
+      </tr>
+      <tr>
+        <td>*</td>
+        <td>คูณ (Multiplication)</td>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td>หาร (Division)</td>
+      </tr>
+      <tr>
+        <td>%</td>
+        <td>หารเอาแต่เศษ (Modulo)</td>
+      </tr>
+      <tr>
+        <td>**</td>
+        <td>ยกกำลัง (Exponent)</td>
+      </tr>
+      <tr>
+        <td>//</td>
+        <td>หารปัดเศษ (Floor Division)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <br>
+    <br>
+
+
+    <h2>ตัวดำเนินการเปรียบเทียบ (Comparison Operator)</h2>
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>สัญลักษณ์</th>
+        <th>ความหมาย</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>==</td>
+        <td>เท่ากับ (Equal)</td>
+      </tr>
+      <tr>
+        <td>!=</td>
+        <td>ไม่เท่ากับ (Not equal)</td>
+      </tr>
+      <tr>
+        <td><</td>
+        <td>น้อยกว่า (Less than)</td>
+      </tr>
+      <tr>
+        <td><=</td>
+        <td>น้อยกว่าเท่ากับ (Less than or equal)</td>
+      </tr>
+      <tr>
+        <td>></td>
+        <td>มากกว่า (Greater than)</td>
+      </tr>
+      <tr>
+        <td>>=</td>
+        <td>มากกว่าเท่ากับ (Greater than or equal)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <br>
+    <br>
+
+
+
+    <h2>ตัวดำเนินการกำหนดค่า (Assignment Operator)</h2>
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>สัญลักษณ์</th>
+        <th>ความหมาย</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>=</td>
+        <td>กำหนดค่าจากขวาให้ซ้าย</td>
+      </tr>
+      <tr>
+        <td>+=</td>
+        <td>บวกก่อนแล้วกำหนดค่า</td>
+      </tr>
+      <tr>
+        <td>-=</td>
+        <td>ลบก่อนแล้วกำหนดค่า</td>
+      </tr>
+      <tr>
+        <td>*=</td>
+        <td>คูณก่อนแล้วกำหนดค่า</td>
+      </tr>
+      <tr>
+        <td>/=</td>
+        <td>หารก่อนแล้วกำหนดค่า</td>
+      </tr>
+      <tr>
+        <td>%=</td>
+        <td>โมดูโลก่อนแล้วกำหนดค่า</td>
+      </tr>
+      <tr>
+        <td>**=</td>
+        <td>ยกกำลังก่อนแล้วกำหนดค่า</td>
+      </tr>
+      <tr>
+        <td>//=</td>
+        <td>หารเอาส่วนก่อนแล้วกำหนดค่า</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <br>
+    <br>
+
+
+
+<h2>ตัวดำเนินการตรรกศาสตร์ (Logical Operator)</h2>
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ตัวดำเนินการ</th>
+        <th>ความหมาย</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>and</td>
+        <td>และ</td>
+      </tr>
+      <tr>
+        <td>or</td>
+        <td>หรือ</td>
+      </tr>
+      <tr>
+        <td>not</td>
+        <td>ไม่</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <h2>String</h2>
+    <hr>
+    <p>&nbsp&nbsp&nbspString ในPythonคือข้อมูลตัวอักขระและประโยคโดยในPython3จะจัดเก็บstringเป็นแบบ Unicode</p>
+    <h3><strong>การเข้าถึงตำแหน่งนข้อมูลชนิดstring</strong></h3>
+    <p>การเข้าถึงข้อมูลชนิดstringโดยตัวแรกจะเริ่มด้วยเลข 0 และตัวสุดท้ายคือ n-1 โดยเรียกแต่ละตำแหน่งคือindex มีรูปแบบดังนี้<p>
+    <code class="border">str[index]</code>
+    <p>str   : ข้อมูลชนิดstring</p>
+    <p>index : ตำแหน่งในstring</p>
+    <br>
+    <p>Example</p>
+    <code class="border">str[start : stop : step]</code>
+    <br>
+    <br>
+    <p>start   : ตำแหน่งเริ่มต้น</p>
+    <p>stop    : ตำแหน่งสิ้นสุด</p>
+    <p>step    : จำนวนในการข้าม</p>
+    <div class="bord">
+        <code>A = 'This is string'</code>
+        <br>
+        <code>A[0]</code>
+        <br>
+        <code style="color:cornflowerblue" >output:T</code>
+        <br>
+        <code>A[13]</code>
+        <br>
+        <code style="color:cornflowerblue" >output:g</code>
+        <br>
+        <code>A[0:7]</code>
+        <br>
+        <code style="color:cornflowerblue" >output:This is</code>
+        <br>
+        <code>A[8:14]</code>
+        <br>
+        <code style="color:cornflowerblue" >output: string</code>
+        <br>
+        <code>A[0:14]</code>
+        <br>
+        <code style="color:cornflowerblue" >output:This is string</code>
+        <br>
+        <code>A[0:14:2]</code>
+        <br>
+        <code style="color:cornflowerblue" >output:Ti ssrn</code>
+        <br>
+        <code>A[0:1]</code>
+        <br>
+        <code style="color:cornflowerblue" >output:T</code>
+        <br>
+        <code>A[13:14]</code>
+        <br>
+        <code style="color:cornflowerblue" >output:g</code>
+        <br>
+        <code>A[10:11]</code>
+        <br>
+        <code style="color:cornflowerblue" >output:r</code>
+        <br>
+    </div>
+    <br>
+    <p>จะเห็นได้ว่าตำแหน่งสุดท้ายของindexกับการเข้าถึงแบบการกำหนดตำแหน่งจะมีค่าต่างกัน เนื่องจาก<code class="border">A[13]</code>หมายถึงเอาตำแน่งที่13 แต่
+    <code class="border">A[13:14]</code>หมายถึงงเอาตำแหน่ง13และสิ้นสุดก่อนตำแหน่งที่14นั่นเอง</p>
+    <h2>Method เกี่ยวกับ string</h2>
+<div>
+  <table class="table table-bordered">
+      <tbody>
+      <tr>
+        <td>lower()</td>
+        <td>แปลงเป็นตัวพิมพ์เล็กทั้งหมด</td>
+      </tr>
+      <tr>
+        <td>upper()</td>
+        <td>แปลงเป็นตัวพิมพ์ใหญ่ทั้งหมด</td>
+      </tr>
+      <tr>
+        <td>len()</td>
+        <td>นับจำนวนstring</td>
+      </tr>
+      <tr>
+        <td>islower()</td>
+        <td>ตรวจสอบว่าเป็นตัวพิมพ์เล็กทั้งหมดหรือไม่</td>
+      </tr>
+      <tr>
+        <td>isupper()</td>
+        <td>ตรวจสอบว่าเป็นตัวพิมพ์ใหญ่ทั้งหมดหรือไม่</td>
+      </tr>
+
+    </tbody>
+      <thead>
+      <tr>
+          <th>Method</th>
+          <th>ความหมาย</th>
+
+      </tr>
+      </thead>
+  </table>
+</div>
+    <h2>ลิสต์ (List)</h2>
+    <hr>
+    <p>&nbsp&nbsp&nbsplist มีความใกล้เคียงกับarrayในหลายๆภาษา ซึ่งสามารถมีข้อมูหลายประเภทในlistเดียวได้ โดยใช้เครื่องหมายคั่นระหว่างสมาชิกคือ"," เช่น</p>
+    <code class="border">X = [1, 2, 3, 4]</code>
+    <br>
+    <br>
+    <code class="border">Y = ['A', 'B', 'C']</code>
+    <br>
+    <br>
+    <p>มีการเข้าถึงสมาชิกคล้ายstring คือ </p>
+    <code class="border">str[start : stop : step]</code>
+    <br>
+    <br>
+    <p>start   : ตำแหน่งเริ่มต้น</p>
+    <p>stop    : ตำแหน่งสิ้นสุด</p>
+    <p>step    : จำนวนในการข้าม</p>
+
+    <h2>Method เกี่ยวกับ list</h2>
+
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>ความหมาย</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>append()</td>
+        <td>เพิ่มข้อมูลต่อท้ายlist</td>
+      </tr>
+      <tr>
+        <td>extend()</td>
+        <td>เพิ่มlistเข้าไปในlist</td>
+      </tr>
+      <tr>
+        <td>pop()</td>
+        <td>ลบข้อมูลโดยระบุตำแหน่ง</td>
+      </tr>
+      <tr>
+        <td>len()</td>
+        <td>นับจำนวนสมาชิก</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>ทูเพิล (Tuple)</h2>
+    <hr>
+    <p>&nbsp&nbsp&nbspคล้ายกับlist แต่ไม่สามมารถแก้ไข้ข้อมูลในะupleได้ ซึ่งสามารถมีข้อมูหลายประเภทในtupleเดียวได้ โดยใช้เครื่องหมายคั่นระหว่างสมาชิกคือ"," เช่น</p>
+    <code class="border">X = (1, 2, 3, 4)</code>
+    <br>
+    <br>
+    <code class="border">Y = ('A', 10, 'Apple)</code>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <h2>Dictionary</h2>
+    <hr>
+    <p>&nbsp&nbsp&nbspเป็นข้อมูลคล้ายlist แต่มีความพิเศษคือมีkeyและvalue keyหมายถึงค่าสำหรับเข้าถึงข้อมูลของvalue valueคือค่าที่ถูกอ้างอิงโดยkey โดยใช้เครื่องหมายคั่นระหว่างสมาชิกคือ"," และช้เครื่องหมายคั่นระหว่างkey,valueสมาชิกคือ":" เช่น</p>
+    <code class="border">fruit = {1:'Apple', 2:'Banana', 3:'Orange'}</code>
+    <br>
+    <br>
+    <code class="border">price = ('Apple':320, 'Samsung':200, 'Sony':190)</code>
+    <br>
+    <br>
+    <h3><strong>การเข้าถึงข้อมูลชนิดDictionary</strong></h3>
+    <p>ปกติเราจะอ้างถึงindexในการเข้าถึงข้อมูล แต่dictionaryใช้keyในการเข้าถึงข้อมูล</p>
+    <div class="bord">
+        <code>fruit = {1:'Apple', 2:'Banana', 3:'Orange'}
+        <br>
+            fruit[1]
+        </code>
+        <br>
+        <code style="color:cornflowerblue" >output:Apple</code>
+        <br>
+        <code>fruit[3]</code>
+        <br>
+        <code style="color:cornflowerblue" >output:Orange</code>
+        <br>
+    </div>
+
+    <h2>Method เกี่ยวกับ Dictionary</h2>
+
+<div>
+  <table class="table table-bordered">
+    <thead>
+        <tr>
+        <th>Method</th>
+        <th>ความหมาย</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>get()</td>
+        <td>ใช้สำหรับแสดงค่าvalueของkey</td>
+        </tr>
+         <tr>
+        <td>pop()</td>
+        <td>ใช้สำหรีบลบvalueโดยระบุค่าkey</td>
+        </tr>
+        <tr>
+        <td>popitem()</td>
+        <td>ลบข้อมูลจากตัวสุดท้ายออก</td>
+        </tr>
+        <tr>
+        <td>len()</td>
+        <td>นับจำนวนสมาชิก</td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>เซต (Set)</h2>
+    <hr>
+    <p>&nbsp&nbsp&nbspเป็นกลุ่มข้อมูลที่ใช้เก็บข้อมูลชนิดเดียวกันหรือคล้ายกัน โดยใช้เครื่องหมายคั่นระหว่างสมาชิกคือ"," เช่น</p>
+    <code class="border">computer = {'Dell', 'Asus', 'Hp'}</code>
+    <br>
+    <br>
+    <code class="border">number = {1, 2, 3, 4, 5, 6}</code>
+    <br>
+    <br>
+    <h2>Methon เกี่ยวกับ set</h2>
+
+<div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>ความหมาย</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>different()</td>
+        <td>หาสมาชิกที่ต่างกัน</td>
+      </tr>
+      <tr>
+        <td>intersection()</td>
+        <td>หาสมาชิกที่เหมือนกัน</td>
+      </tr>
+      <tr>
+        <td>issubset()</td>
+        <td>ตรวจสอบว่าเป็นsubsetหรือไม่</td>
+      </tr>
+      <tr>
+        <td>issuperset()</td>
+        <td>ตรวจสอบว่าเป็นsupersetหรือไม่</td>
+      </tr>
+      <tr>
+        <td>pop()</td>
+        <td>ลบสมาชิกออกโดยการสุ่ม</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <h2>การเขียนโปรแกรมกำหนดเงื่อนไข (Conditional statements)</h2>
+    <hr>
+    <p>&nbsp&nbsp&nbsp&nbspสำหรับการเขียนโปรแกรมสิ่งที่ขาดไม่ได้เลยคือ การเขียนโปรแกรมกำหนดเงื่อนไข (Conditional statements) โดยที่ใช้ใช้booleanในการกำหนดทางเลือก</p>
+    <h3><strong>คำสั่ง if</strong></h3>
+    <p>คำสั่งนี้โปรแกรมจะเช็คว่าจริงหรือไม่ หากจริงจะทำตามคำสั่งในif ถ้าไม่ก็จะข้ามไป โดยจะมีcolon(:) จบคำสั่งเสมอ</p>
+    <div class="bord">
+        <code>
+            if <code style="color: #222831">condition :</code>
+            <br>&nbsp&nbsp
+               <code style="color: #222831">statement 1</code>
+            <br>&nbsp&nbsp
+               <code style="color: #222831">statement 2</code>
+            <br>&nbsp&nbsp
+               <code style="color: #222831">...</code>
+            <br>&nbsp&nbsp
+               <code style="color: #222831">statement n</code>
+            <br>
+        </code>
+    </div>
+    <br>
+    <p>Example</p>
+    <div class="bord">
+        <code>
+            X = 40; Y = 30<br>
+            if X > Y :<br>
+            &nbsp&nbsp&nbspprint("X is greater than Y")<br>
+            print("Finish!!")<br>
+        </code>
+        <code style="color:cornflowerblue">
+            output: X is greater than Y<br>
+            output: Finish!!
+        </code>
+    </div>
+    <p>เนื่องจาก <code>X < Y</code> เป็นจริงทำให้ดำเนินคำสั่ง <code>print("X is greater than Y")</code> หลังจากออกนอกคำสั่ง จึงทำคำสั่ง<code>print("Finish!!")</code> ต่อ</p>
+    <br>
+    <br>
+
+
+    <h3><strong>คำสั่ง if else</strong></h3>
+    <hr>
+    <p>&nbsp&nbsp&nbsp&nbspคำสั่งนี้เป็นคำสั่งแบบ2ทางเลือกคือ หากอันแรกจริงก็จะไม่ทำอัน2 หากอันแรกเท็จก็จะทำอัน2</p>
+
+    <div class="bord">
+        <code>
+            if <code style="color: #222831">condition :</code>
+            <br>&nbsp&nbsp
+               <code style="color: #222831">statement 1</code>
+            <br>
+            else :
+            <br>&nbsp&nbsp
+               <code style="color: #222831">statement 2</code>
+
+        </code>
+    </div>
+    <br>
+    <p>Example</p>
+    <div class="bord">
+        <code>
+            X = 40; Y = 30<br>
+            if X > Y :<br>
+            &nbsp&nbsp&nbspprint("X is greater than Y")<br>
+            else:<br>
+            &nbsp&nbsp&nbspprint("Y is greater than X")<br>
+        </code>
+        <code style="color:cornflowerblue">
+            output: X is greater than Y<br>
+        </code>
+    </div>
+    <br>
+    <p>Example2</p>
+    <div class="bord">
+        <code>
+            X = 40; Y = 30<br>
+            if X < Y :<br>
+            &nbsp&nbsp&nbspprint("X is greater than Y")<br>
+            else:<br>
+            &nbsp&nbsp&nbspprint("Y is greater than X")<br>
+        </code>
+        <code style="color:cornflowerblue">
+            output: Y is greater than X<br>
+        </code>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h3><strong>คำสั่ง for</strong></h3>
+    <hr>
+    <p>&nbsp&nbsp&nbspสำหรับคำสั่ง <code>for</code> นั้นจะแตกต่างตั่งที่มีจำนวนรอบมากำหนดการแสดงผลโดยนับจำนวนครั้งจนถึงจุดสิ้นสุดของการวนลูป เช่น</p>
+     <div class="bord">
+        <code>
+            for i in range(5):<br>
+            &nbsp&nbsp&nbspprint( i )<br>
+        </code>
+        <code style="color:cornflowerblue">
+            output: 0<br>
+            output: 1<br>
+            output: 2<br>
+            output: 3<br>
+            output: 4<br>
+        </code>
+    </div>
+    <br>
+    <p>จากตัวอย่างข้างบน <code>range(5)</code> คือการเก็บเลขตั้งแต่0ถึง4มีจำนวน5ตัว โดย <code>i in</code> คือการเก็บค่าของ <code>range</code> ในค่าของ <code>i</code> ในแต่ละรอบ</p>
+    <p>Example</p>
+    <div class="bord">
+        <code>
+            c = ‘Meow’  #กำหนดตัวแปร s เก็บข้อมูลสตริง<br>
+            for i in c: #เรียกใช้คำสั่ง for เพื่ออ่านข้อมูลใน c<br>
+            &nbsp&nbsp&nbspprint (‘Meow: ’, i)  #แสดงข้อมูลในแต่ละลิสต์รายการที่เก็บ ในตัวแปร <br>
+        </code>
+        <code style="color:cornflowerblue">
+            output: Meow: M<br>
+            output: Meow: e<br>
+            output: Meow: o<br>
+            output: Meow: w<br>
+        </code>
+    </div>
+    <br>
+        <p>นอกจากนี้แล้วยังสามารถใช้ dictionary, tuple, list แทน stringได้อีกด้วย</p>
+    <br>
+    <br>
+    <br>
+    <h3><strong>คำสั่ง while</strong></h3>
+    <hr>
+    <p>&nbsp&nbsp&nbspสำหรับคำสั่ง <code>while</code> มีความพิเศษคือเป็นคำสั่งวนลูป(loop) หรือวนรอบไปเรื่อยๆ มีรูปแบบคือ</p>
+     <div class="bord">
+        <code>
+            while Boolean-expression:<br>
+            &nbsp&nbsp&nbspblock statement<br>
+            Boolean-expression<br>
+        </code>
+    </div>
+    <br>
+    <p>จะวนลูปเมื่อเงื่อนไขเป็นจริง และหยุดลูปเมื่อเป็นเท็จ</p>
+    <p>Example</p>
+    <div class="bord">
+        <code>
+            while True:<br>
+            &nbsp&nbsp&nbspprint (‘Meow’)<br>
+        </code>
+        <code style="color:cornflowerblue">
+            output: Meow<br>
+            output: Meow<br>
+            output: Meow<br>
+            output: Meow<br>
+            &nbsp&nbsp&nbsp.<br>
+            &nbsp&nbsp&nbsp.<br>
+            &nbsp&nbsp&nbsp.<br>
+            output: Meow<br>
+        </code>
+    </div>
+    <br>
+        <p>คือเมื่อเป็นจริงมันจะทำคำสั่งนั่นไปเรื่อยๆ</p>
+    <p>Example2</p>
+    <div class="bord">
+        <code>
+            num = 1<br>
+            while count <= 5<br>
+            &nbsp&nbsp&nbspprint ( num ) #แสดงค่ำในตัวแปร num<br>
+            num += 1 #เทียบเท่าn=n+1<br>
+        </code>
+        <code style="color:cornflowerblue">
+            output: 1<br>
+            output: 2<br>
+            output: 3<br>
+            output: 4<br>
+            output: 5<br>
+        </code>
+    </div>
+    <br>
+    <p>เห็นได้ว่าโปรแกรมจะทำซ้ำจนกว่าเงื่อนไขจะเป็นเท็จ</p>
+    <br>
+    <br>
+    <br>
+    </div>
+
+</body>
