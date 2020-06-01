@@ -323,3 +323,18 @@ table, th, td {
         border: 1px solid #FFFFFF;
         border-collapse: collapse;
         }
+.side {
+        border-left: 5px solid #FFFFFF;
+        padding:5px 5px;
+        }
+hr {    height:1px;
+        border:none;
+        color:#FCE1CA;
+        background-color:#FCE1CA;
+        width:60%;
+        text-align: left;
+        margin-left: 0;
+      }
+input[type=submit] {
+        width: 20em;  height: 2em;
+      }
