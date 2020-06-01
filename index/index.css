@@ -93,7 +93,7 @@ body,html {
 }
 #portfolio div h1 {
     font-size:40px;
-    background-image: linear-gradient(to left, #C87329 0%, #FCE1CA 100%);
+    background-image: linear-gradient(to left, #FCE1CA 0%, #C87329 100%);
     -webkit-background-clip:text;
     background-clip:text;
     -webkit-text-fill-color: transparent;
@@ -262,7 +262,7 @@ body,html {
 }
 #footer a {
     font-size:18px;
-    background-image: linear-gradient(to left, #34ace0 0%, #273c75 100%);
+    background-image: linear-gradient(to left, #FCE1CA 0%, #C87329 100%);
     -webkit-background-clip:text;
     background-clip:text;
     -webkit-text-fill-color: transparent;
@@ -323,11 +323,38 @@ table, th, td {
         border: 1px solid #FFFFFF;
         border-collapse: collapse;
         }
-@import 'https://fonts.googleapis.com/css?family=Kanit|Prompt';
-body{
-    font-family: 'Kanit', sans-serif;
-    }
 
-h1,h2,h3{
-            font-family: 'Prompt', sans-serif;
+.hr-text {
+        line-height: 1em;
+        position: relative;
+        outline: 0;
+        border: 0;
+        color: white;
+        text-align: center;
+        height: 1.5em;
+        opacity: .5;
+
+          &:before {
+          content: '';
+          // use the linear-gradient for the fading effect
+          // use a solid background color for a solid bar
+          background: linear-gradient(to right, transparent, #C87329, transparent);
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          height: 1px;
+          }
+          &:after {
+            content: attr(data-content);
+            position: relative;
+            display: inline-block;
+            color: white;
+
+            padding: 0 .5em;
+            line-height: 1.5em;
+            // this is really the only tricky part, you need to specify the background color of the container element...
+            color: #FCE1CA;
+            background-color: #fcfcfa;
+          }
         }
